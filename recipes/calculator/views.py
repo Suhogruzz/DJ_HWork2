@@ -33,8 +33,7 @@ DATA = {
 def recipe(request, name):
     count = int(request.GET.get('servings', 1))
 
-    context = {}
-    context['recipe'] = {}
+    context = {'recipe': {}}
 
     if name in DATA:
         for item, value in DATA[name].items():
